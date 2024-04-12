@@ -18,9 +18,9 @@ class TechnologySeeder extends Seeder
     {
         $technology_names = ['HTML', 'CSS', 'BOOTSRTAP', 'SASS', 'JAVASCRIPT', 'VUEJS', 'NODEJS', 'LARAVEL', 'PHP', 'BLADE'];
 
-        foreach ($technology_names as $technology_name) {
+        foreach ($technology_names as $_technology) {
             $technology = new Technology;
-            $technology->label = $technology_name;
+            $technology->label = $_technology;
             $technology->color = $faker->hexColor();
             $technology->save();
         }

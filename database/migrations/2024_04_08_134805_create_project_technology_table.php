@@ -14,8 +14,8 @@ return new class extends Migration {
     {
         Schema::create('project_technology', function (Blueprint $table) {
             $table->id();
-            $table->integer('project_id');
-            $table->integer('technology_id');
+            $table->foreignId('project_id')->constrained();
+            $table->foreignId('technology_id')->constrained();
             $table->timestamps();
         });
     }
